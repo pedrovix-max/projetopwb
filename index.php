@@ -2,7 +2,7 @@
 <?php
 if(isset($_POST["login"]))
     {
-        if(!empty($_POST["login"]))
+        if(empty($_POST["login"]))
             {
                 $mensagemERRO = " Preencha os campos de login ";
             }
@@ -10,7 +10,7 @@ if(isset($_POST["login"]))
     }
     else
         {
-            $mensagemERRO = "Preencha os campos de login";
+          
 
         }
 ?>
@@ -30,10 +30,9 @@ if(isset($_POST["login"]))
             echo   '<div class="alert alert-danger">';
             echo    $mensagemERRO;
             echo    '</div>' ;
+                    }
             ?>
-            <?php 
-            }
-            ?>
+           
                 <form action="index.php" method="post">
                 
                 <label for="login">Username</label>
